@@ -1,150 +1,230 @@
-🤖 Mutual Fund FAQ Chatbot (RAG + Google Gemini)
+Here is a **more “Top GitHub Project style” README** with **badges, cleaner structure, and better visual hierarchy**. This format is used by many **AI / ML repos that attract stars and recruiters**. ⭐
 
-An AI-powered Mutual Fund FAQ Assistant built using Retrieval-Augmented Generation (RAG) and Google Gemini that allows users to query mutual fund scheme details across Asset Management Companies (AMCs).
+You can **paste this directly into `README.md`**.
 
-Instead of manually browsing PDFs, fact sheets, or AMC websites, users can ask questions in natural language and receive contextual answers instantly.
+---
 
-Example queries:
+# 🤖 Mutual Fund AI Assistant
 
-What is the expense ratio of SBI Small Cap Fund?
+### RAG-LLM Chatbot powered by Google Gemini
 
-What is the minimum SIP amount for Nippon India Growth Fund?
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![LLM](https://img.shields.io/badge/LLM-Google%20Gemini-orange)
+![Architecture](https://img.shields.io/badge/Architecture-RAG-green)
+![Status](https://img.shields.io/badge/Status-Active-success)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-Does ELSS funds have a lock-in period?
+An **AI-powered Mutual Fund FAQ Chatbot** built using **Retrieval-Augmented Generation (RAG)** and **Google Gemini** that enables users to **query mutual fund scheme information across multiple AMCs using natural language.**
 
-What is the benchmark index for a scheme?
+Instead of manually searching PDFs or AMC websites, users can **ask questions conversationally and receive accurate contextual responses instantly.**
 
-What is the exit load for a specific mutual fund?
+---
 
-The chatbot retrieves the most relevant information from the knowledge base and uses Google Gemini LLM to generate a contextual response.
+# 🚀 Live Demo
 
-🚀 Live Demo
+Try the chatbot here 👇
 
-Try the chatbot here:
+🔗 [https://aistudio.google.com/apps/e5ce3e14-e9bc-4b33-9c22-37c12abef7fb?fullscreenApplet=true&showPreview=true&showAssistant=true](https://aistudio.google.com/apps/e5ce3e14-e9bc-4b33-9c22-37c12abef7fb?fullscreenApplet=true&showPreview=true&showAssistant=true)
 
-👉 https://aistudio.google.com/apps/e5ce3e14-e9bc-4b33-9c22-37c12abef7fb?fullscreenApplet=true&showPreview=true&showAssistant=true
+---
 
-🧠 Key Features
+# 🎯 Problem Statement
 
-✔ Natural language querying for mutual fund information
-✔ Retrieval-Augmented Generation for accurate responses
-✔ Covers multiple AMCs and schemes
-✔ Context-aware answers powered by Google Gemini
-✔ Reduces dependency on static documents and manual search
+Investors and analysts often struggle with:
 
-⚙️ Tech Stack
-Component	Technology
-LLM	Google Gemini
-Architecture	Retrieval-Augmented Generation (RAG)
-Data Source	Mutual Fund scheme data
-Embedding	Vector embeddings for semantic search
-Backend	Python
-UI	AI Studio App Interface
-🏗 System Architecture
-                User Query
-                     │
-                     ▼
-             Chatbot Interface
-                     │
-                     ▼
-             Query Processing Layer
-                     │
-                     ▼
-           Embedding Generation
-                     │
-                     ▼
-              Vector Database
-          (Mutual Fund Knowledge)
-                     │
-         Retrieve Relevant Documents
-                     │
-                     ▼
-              Context Injection
-                     │
-                     ▼
-             Google Gemini LLM
-                     │
-                     ▼
-              Generated Answer
-                     │
-                     ▼
-                User Response
-🔄 RAG Workflow
+* Scattered mutual fund information across **multiple AMC websites**
+* Long **scheme documents and PDFs**
+* Manual search for **expense ratio, exit load, SIP limits, etc**
 
-1️⃣ User asks a question about a mutual fund
-2️⃣ Query is converted into vector embeddings
-3️⃣ System retrieves relevant fund information from the knowledge base
-4️⃣ Retrieved data is added as context to the LLM prompt
-5️⃣ Google Gemini generates a natural language response
-6️⃣ Answer is returned to the user
+This project solves the problem by creating a **conversational AI assistant** capable of retrieving and explaining fund information instantly.
 
-📊 Example Queries
-Query	Response
-Expense ratio of SBI Small Cap Fund	Returns latest expense ratio
-Lock-in period for ELSS funds	Explains 3-year lock-in
-Minimum SIP for Axis Bluechip Fund	Returns SIP amount
-Exit load for ICICI Prudential Fund	Shows exit load details
-📂 Project Structure
+---
+
+# ✨ Features
+
+✅ Natural Language Querying
+✅ Retrieval-Augmented Generation (RAG)
+✅ Multi-AMC Scheme Coverage
+✅ Contextual Answer Generation
+✅ Faster Mutual Fund Data Discovery
+✅ Gemini-powered Intelligent Responses
+
+---
+
+# 🧠 Example Queries
+
+Users can ask questions like:
+
+💰 What is the **expense ratio of SBI Small Cap Fund?**
+📊 What is the **benchmark index for Axis Bluechip Fund?**
+📉 What is the **exit load of Nippon India Growth Fund?**
+🔒 Do **ELSS funds have a lock-in period?**
+💳 What is the **minimum SIP amount for a mutual fund?**
+
+---
+
+# 🏗 System Architecture
+
+```
+                ┌──────────────────────┐
+                │       User Query      │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │   Chatbot Interface   │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │   Query Processing    │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │  Embedding Generator  │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │   Vector Database     │
+                │ (Mutual Fund Data)    │
+                └──────────┬───────────┘
+                           │
+                    Retrieve Context
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │   Google Gemini LLM   │
+                └──────────┬───────────┘
+                           │
+                           ▼
+                ┌──────────────────────┐
+                │    Generated Answer   │
+                └──────────────────────┘
+```
+<img width="1536" height="1024" alt="ChatGPT Image Mar 6, 2026, 10_07_22 AM" src="https://github.com/user-attachments/assets/56ab1b55-97e2-4a06-8c20-debbca5cf9f6" />
+
+---
+
+# 🔄 RAG Pipeline
+
+The chatbot follows a **Retrieval-Augmented Generation pipeline**:
+
+1️⃣ User submits a question
+2️⃣ Query is converted into **vector embeddings**
+3️⃣ Semantic search retrieves **relevant mutual fund data**
+4️⃣ Retrieved context is passed to the **Gemini LLM**
+5️⃣ Gemini generates a **context-aware response**
+6️⃣ The answer is returned to the user
+
+---
+
+# ⚙️ Tech Stack
+
+| Layer          | Technology                           |
+| -------------- | ------------------------------------ |
+| LLM            | Google Gemini                        |
+| Architecture   | Retrieval Augmented Generation (RAG) |
+| Language       | Python                               |
+| Embeddings     | Vector Embedding Model               |
+| Knowledge Base | Mutual Fund Scheme Data              |
+| Interface      | Google AI Studio                     |
+
+---
+
+# 📂 Project Structure
+
+```
 mutual-fund-rag-chatbot
 │
 ├── data/
-│   ├── mutual_fund_schemes.pdf
-│
-├── embeddings/
-│   ├── vector_store
+│   └── mutual_fund_data.pdf
 │
 ├── src/
 │   ├── data_loader.py
 │   ├── embeddings.py
 │   ├── retriever.py
 │   ├── rag_pipeline.py
-│   ├── chatbot.py
+│   └── chatbot.py
 │
 ├── requirements.txt
-├── README.md
-🛠 Installation
-1️⃣ Clone the repository
+└── README.md
+```
+
+---
+
+# 🛠 Installation
+
+### Clone the repository
+
+```bash
 git clone https://github.com/yourusername/mutual-fund-rag-chatbot.git
 cd mutual-fund-rag-chatbot
-2️⃣ Install dependencies
+```
+
+### Install dependencies
+
+```bash
 pip install -r requirements.txt
-3️⃣ Add your Gemini API Key
+```
 
-Create a .env file
+### Add Gemini API Key
 
+Create a `.env` file
+
+```
 GEMINI_API_KEY=your_api_key_here
-4️⃣ Run the application
+```
+
+### Run the application
+
+```bash
 python chatbot.py
-📈 Use Cases
+```
 
-Investor support chatbot
+---
 
-Financial advisory platforms
+# 📊 Potential Use Cases
 
-Mutual fund research tools
+🏦 Fintech platforms
+📈 Investment advisory tools
+🤖 Customer support chatbots for AMCs
+📚 Financial education assistants
+📊 Mutual fund research tools
 
-AMC customer support automation
+---
 
-Fintech AI assistants
+# 🔮 Future Improvements
 
-🔮 Future Improvements
+* Real-time **AMC data APIs**
+* **SEBI / AMFI data integration**
+* Portfolio analysis assistant
+* Mutual fund comparison tool
+* Web & WhatsApp chatbot integration
+* Real-time NAV retrieval
 
-Real-time AMC data integration
+---
 
-SEBI / AMFI data pipeline
+# 👨‍💻 Author
 
-Portfolio analysis support
+**Dee**
 
-Scheme comparison assistant
+Building **AI-powered Fintech solutions using LLMs, RAG, and intelligent automation.**
 
-WhatsApp / Web chatbot integration
+---
 
-👨‍💻 Author
+# ⭐ Support
 
-Built by Dee
+If you found this project useful:
 
-If you're exploring AI + Fintech solutions, feel free to connect or collaborate.
+⭐ Star the repository
+🍴 Fork it
+🤝 Contribute to improve it
 
-⭐ Support
+---
 
-If you found this project useful, consider starring the repository.
+# 📢 Connect
+
+If you’re working in **AI, Fintech, Product, or LLM applications**, feel free to connect and collaborate.
+
